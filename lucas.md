@@ -27,6 +27,12 @@ La commande df -T n'affiche pas le disque sdb car il n'est pas encore monté
 
 **6. Faites en sorte que les deux partitions créées soient montées automatiquement au démarrage de la machine, respectivement dans les points de montage /data et /win (vous pourrez vous passer des UUID en raison de l’impossibilité d’effectuer des copier-coller)**
 
+nano /etc/fstab on ajoute :
+
+#device        mountpoint             fstype    options    dump   fsck
+/dev/sdb1      /data                   ext4     defaults     0       0
+/dev/sdb2      /win                    ext4     defaults     0       0
+
 **7. Utilisez la commande mount puis redémarrez votre VM pour valider la configuration**
 
 **8. Montez votre clé USB dans la VM**
