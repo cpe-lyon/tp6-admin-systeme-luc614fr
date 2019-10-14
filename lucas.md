@@ -57,11 +57,12 @@ j'ai fait la commande `fdisk /dev/sdb` puis d pour supprimé les deux partitions
 
 **3. A l’aide de la commande pvcreate, créez un volume physique LVM. Validez qu’il est bien créé, en utilisant la commande pvdisplay.**
 
+j'ai fait `pvcreate /dev/sdb1` 
 j'ai créer une partitition normalement et ensuite j'ai fait `t` puis j'ai tapé le code `8E` 
 
 **4. A l’aide de la commande vgcreate, créez un groupe de volumes, qui pour l’instant ne contiendra que le volume physique créé à l’étape précédente. Vérifiez à l’aide de la commande vgdisplay.**
 
- Par convention, on nomme généralement les groupes de volumes vgxx (où xx représente l’indice du groupe de volume, en commençant par 00, puis 01...)
+j'ai fait `vgcreate volume1 /dev/sdb1` 
 
 **5. Créez un volume logique appelé lvData occupant l’intégralité de l’espace disque disponible.**
 
