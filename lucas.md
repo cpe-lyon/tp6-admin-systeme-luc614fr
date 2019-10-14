@@ -71,7 +71,7 @@ j'ai fait la commande `lvcreate -l 100%FREE -n 1vData volume1`
 **6. Dans ce volume logique, créez une partition que vous formaterez en ext4, puis procédez comme dans l’exercice 1 pour qu’elle soit montée automatiquement, au démarrage de la machine, dans /data.**
 
 j'ai fait fdisk `/dev/mapper/volume1-1vData` puis `mkfs.ext4 /dev/mapper/volume1-1vData`
-
+j'ai rajouté dans le fstab la ligne `/dev/mapper/volume1-1vData      /data            ext4     defaults     0       0` 
 
 **7. Eteignez la VM pour ajouter un second disque (peu importe la taille pour cet exercice). Redémarrez la VM, vérifiez que le disque est bien présent. Puis, répétez les questions 2 et 3 sur ce nouveau disque.**
 
