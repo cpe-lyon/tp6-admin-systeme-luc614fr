@@ -53,12 +53,7 @@ j'ai fait la commande `umount /data` et `umount /win` pour démonter les systèm
 
 **2. Supprimez les deux partitions du disque, et créez une patition unique de type LVM**
 
- La création d’une partition LVM n’est pas indispensable, mais vivement recommandée quand
-on utilise LVM sur un disque entier. En effet, elle permet d’indiquer à d’autres OS ou logiciels de
-gestion de disques (qui ne reconnaissent pas forcément le format LVM) qu’il y a des données sur
-ce disque.
-
- Attention à ne pas supprimer la partition système !
+j'ai fait la commande `fdisk /dev/sdb` puis d pour supprimé les deux partitions
 
 **3. A l’aide de la commande pvcreate, créez un volume physique LVM. Validez qu’il est bien créé, en utilisant la commande pvdisplay.**
 
