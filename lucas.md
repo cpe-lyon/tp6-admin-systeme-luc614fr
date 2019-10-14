@@ -18,10 +18,11 @@ J'ai refait les mêmes commande pour la seconde partition mais j'ai mis `+3G` et
 
 **4. A ce stade, les partitions ont été créées, mais elles n’ont pas été formatées avec leur système de fichiers. A l’aide de la commande mkfs, formatez vos deux partitions ( pensez à consulter le manuel !)**
 
-J'ai fait la commande `mkfs.ext4 /dev/sdb2` pour la première partition 
+J'ai fait la commande `mkfs.ext4 /dev/sdb1` pour la première partition 
 J'ai fait la commande `mkfs.ntfs /dev/sdb2` pour la deuxième partition 
 
 **5. Pourquoi la commande df -T, qui affiche le type de système de fichier des partitions, ne fonctionne-telle pas sur notre disque ?**
+
 
 **6. Faites en sorte que les deux partitions créées soient montées automatiquement au démarrage de la machine, respectivement dans les points de montage /data et /win (vous pourrez vous passer des UUID en raison de l’impossibilité d’effectuer des copier-coller)**
 
