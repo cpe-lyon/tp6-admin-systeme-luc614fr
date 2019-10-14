@@ -23,6 +23,7 @@ J'ai fait la commande `mkfs.ntfs /dev/sdb2` pour la deuxième partition
 
 **5. Pourquoi la commande df -T, qui affiche le type de système de fichier des partitions, ne fonctionne-telle pas sur notre disque ?**
 
+La commande df -T n'affiche pas le disque sdb car il n'est pas encore monté
 
 **6. Faites en sorte que les deux partitions créées soient montées automatiquement au démarrage de la machine, respectivement dans les points de montage /data et /win (vous pourrez vous passer des UUID en raison de l’impossibilité d’effectuer des copier-coller)**
 
