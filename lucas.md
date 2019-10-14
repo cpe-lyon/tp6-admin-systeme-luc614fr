@@ -66,21 +66,21 @@ j'ai fait `vgcreate volume1 /dev/sdb1`
 
 **5. Créez un volume logique appelé lvData occupant l’intégralité de l’espace disque disponible.**
 
- On peut renseigner la taille d’un volume logique soit de manière absolue avec l’option -L (par exemple -L 10G pour créer un volume de 10 Gio), soit de manière relative avec l’option -l : -l 60%VG pour utiliser 60% de l’espace total du groupe de volumes, ou encore -l 100%FREE pour utiliser la totalité de l’espace libre.
+j'ai fait la commande `lvcreate -l 100%FREE -n 1vData volume1` 
 
 **6. Dans ce volume logique, créez une partition que vous formaterez en ext4, puis procédez comme dans l’exercice 1 pour qu’elle soit montée automatiquement, au démarrage de la machine, dans /data.**
 
-A ce stade, l’utilité de LVM peut paraître limitée. Il trouve tout son intérêt quand on veut par exemple agrandir une partition à l’aide d’un nouveau disque.
+j'ai fait fdisk `/dev/mapper/volume1-1vData` puis `mkfs.ext4 /dev/mapper/volume1-1vData`
+
 
 **7. Eteignez la VM pour ajouter un second disque (peu importe la taille pour cet exercice). Redémarrez la VM, vérifiez que le disque est bien présent. Puis, répétez les questions 2 et 3 sur ce nouveau disque.**
+
+
 
 **8. Utilisez la commande vgextend <nom_vg> <nom_pv> pour ajouter le nouveau disque au groupe de volumes**
 
 **9. Utilisez la commande lvresize (ou lvextend) pour agrandir le volume logique. Enfin, il ne faut pas oublier de redimensionner le système de fichiers à l’aide de la commande resize2fs.**
 
- Il est possible d’aller beaucoup plus loin avec LVM, par exemple en créant des volumes par
-bandes (l’équivalent du RAID 0) ou du mirroring (RAID 1). Le but de cet exercice n’était que de
-présenter les fonctionnalités de base.
 
 ## Exercice 3. Exécution de commandes en différé : at et cron
 
