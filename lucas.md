@@ -37,6 +37,8 @@ on ajoute :
 
 **7. Utilisez la commande mount puis redémarrez votre VM pour valider la configuration**
 
+La commande mount est la suivante `mount -a`. Oui les modifications sont permanentes même après le redémarage de la machine
+
 **8. Montez votre clé USB dans la VM**
 
 **9. Créez un dossier partagé entre votre VM et votre système hôte (rem. il peut être nécessaire d’installer les Additions invité de VirtualBox**
