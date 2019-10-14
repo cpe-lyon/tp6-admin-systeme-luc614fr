@@ -49,6 +49,8 @@ Dans cet exercice, nous allons aborder le partitionnement LVM, beaucoup plus fle
 
 **1. On va réutiliser le disque de 5 Gio de l’exercice précédent. Commencez par démonter les systèmes de fichiers montés dans /data et /win s’ils sont encore montés, et supprimez les lignes correspondantes du fichier /etc/fstab**
 
+j'ai fait la commande `umount /data` et `umount /win` pour démonter les systèmes de fichiers 
+
 **2. Supprimez les deux partitions du disque, et créez une patition unique de type LVM**
 
  La création d’une partition LVM n’est pas indispensable, mais vivement recommandée quand
