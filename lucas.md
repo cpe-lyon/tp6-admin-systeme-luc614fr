@@ -57,8 +57,7 @@ j'ai fait la commande `fdisk /dev/sdb` puis d pour supprimé les deux partitions
 
 **3. A l’aide de la commande pvcreate, créez un volume physique LVM. Validez qu’il est bien créé, en utilisant la commande pvdisplay.**
 
- Toutes les commandes concernant les volumes physiques commencent par pv. Celles concernant
-les groupes de volumes commencent par vg, et celles concernant les volumes logiques par lv.
+j'ai créer une partitition normalement et ensuite j'ai fait `t` puis j'ai tapé le code `8E` 
 
 **4. A l’aide de la commande vgcreate, créez un groupe de volumes, qui pour l’instant ne contiendra que le volume physique créé à l’étape précédente. Vérifiez à l’aide de la commande vgdisplay.**
 
@@ -70,7 +69,7 @@ les groupes de volumes commencent par vg, et celles concernant les volumes logiq
 
 **6. Dans ce volume logique, créez une partition que vous formaterez en ext4, puis procédez comme dans l’exercice 1 pour qu’elle soit montée automatiquement, au démarrage de la machine, dans /data.**
 
- A ce stade, l’utilité de LVM peut paraître limitée. Il trouve tout son intérêt quand on veut par exemple agrandir une partition à l’aide d’un nouveau disque.
+A ce stade, l’utilité de LVM peut paraître limitée. Il trouve tout son intérêt quand on veut par exemple agrandir une partition à l’aide d’un nouveau disque.
 
 **7. Eteignez la VM pour ajouter un second disque (peu importe la taille pour cet exercice). Redémarrez la VM, vérifiez que le disque est bien présent. Puis, répétez les questions 2 et 3 sur ce nouveau disque.**
 
