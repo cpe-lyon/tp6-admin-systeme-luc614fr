@@ -16,7 +16,10 @@ J'ai d'abord fait `fdisk /deb/sdb` puis j'ai mis `n`puis `p` `1` puis entrée pu
 
 J'ai refait les mêmes commande pour la seconde partition mais j'ai mis `+3G` et ensuite une fois créer on appuie sur t et on choisi la seconde partition le numéro 7 (NTFS)
 
-**4. A ce stade, les partitions ont été créées, mais elles n’ont pas été formatées avec leur système de fichiers. A l’aide de la commande mkfs, formatez vos deux partitions ( pensez à consulter le manuel !)**
+**4. A ce stade, les partitions ont été créées, mais elles n’ont pas été formatées avec leur système de fichiers. A l’aide de la commande mkfs, formatez vos deux partitions ( pensez à consulter le manuel !)**
+
+J'ai fait la commande `mkfs.ext4 /dev/sdb2` pour la première partition 
+J'ai fait la commande `mkfs.ntfs /dev/sdb2` pour la deuxième partition 
 
 **5. Pourquoi la commande df -T, qui affiche le type de système de fichier des partitions, ne fonctionne-telle pas sur notre disque ?**
 
