@@ -12,7 +12,7 @@ il est bien detecté
 
 **3. Partitionnez ce disque en utilisant fdisk : créez une première partition de 2 Go de type Linux (n°83), et une seconde partition de 3 Go en NTFS (n°7)**
 
-J'ai d'abord fait `fdisk /deb/sdb` puis j'ai mis `n`puis `p` `1` puis entrée puis `+2G` pour choisir 2Go <br>.
+J'ai d'abord fait `fdisk /deb/sdb` puis j'ai mis `n`puis `p` `1` puis entrée puis `+2G` pour choisir 2Go. <br>
 
 J'ai refait les mêmes commande pour la seconde partition mais j'ai mis `+3G` et ensuite une fois créer on appuie sur t et on choisi la seconde partition le numéro 7 (NTFS)
 
