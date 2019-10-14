@@ -8,7 +8,7 @@ J'ai fait clique droit configuration -> stockage -> créer un nouveau disque dur
 
 **2. Vérifiez que ce nouveau disque dur est bien détecté par le système**
 
-il est bien detecté 
+J'ai fait `fdisk -l`  
 
 **3. Partitionnez ce disque en utilisant fdisk : créez une première partition de 2 Go de type Linux (n°83), et une seconde partition de 3 Go en NTFS (n°7)**
 
