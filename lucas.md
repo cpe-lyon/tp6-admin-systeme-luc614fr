@@ -75,12 +75,15 @@ j'ai rajouté dans le fstab la ligne `/dev/mapper/volume1-1vData      /data     
 
 **7. Eteignez la VM pour ajouter un second disque (peu importe la taille pour cet exercice). Redémarrez la VM, vérifiez que le disque est bien présent. Puis, répétez les questions 2 et 3 sur ce nouveau disque.**
 
-
+Fait
 
 **8. Utilisez la commande vgextend <nom_vg> <nom_pv> pour ajouter le nouveau disque au groupe de volumes**
 
+j'ai fait la commande  `vgextend volume1 /dev/sdc1` 
+
 **9. Utilisez la commande lvresize (ou lvextend) pour agrandir le volume logique. Enfin, il ne faut pas oublier de redimensionner le système de fichiers à l’aide de la commande resize2fs.**
 
+j'ai fait la commande `lvextend -l 100%FREE /dev/volume1/1vData` puis `resize2fs /dev/volume1/1vData` 
 
 ## Exercice 3. Exécution de commandes en différé : at et cron
 
